@@ -55,7 +55,8 @@ on the location entered in the location textbox..*/
 function getEntityDetailsBasedOnLocation(callback) {
 	var url="https://developers.zomato.com/api/v2.1/locations";
 	var city=$("#loc").val();
-	city=city.substring(0,city.indexOf(','));
+	city=city.substring(0,city.indexOf(',') === -1 ? city.length : city.indexOf(','));
+	
 	//Setting the search api parameters.. 
     var searchQ = {
 		    apikey:'95adb6f09319ee2ad8f284f39dfb7d4b',
@@ -69,11 +70,11 @@ function getRestaurantDetailFromAPI (data) {
 	var entityID="";
 	var entityType="";
 	//retrieving the entity id and entity type..
-	data.location_suggestions.forEach(function(item) {
-		entityID=item.entity_id;
-		entityType=item.entity_type;
-	})
-	var url="https://developers.zomato.com/api/v2.1/search";
+
+	entityID=data.location_suggestions[0].entity_id;
+	entityType=data.location_suggestions[0].entity_type;
+	
+		var url="https://developers.zomato.com/api/v2.1/search";
 	//Setting the search api parameters..
 	var searchQ = {
 	    apikey:'95adb6f09319ee2ad8f284f39dfb7d4b',
