@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8" name="viewport" content="width=device-width">
+  <!-- Link of stylesheet added to the page  -->
+  <link rel="stylesheet" type="text/css" href="zomato.css">
+  <!-- Link for bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+ </head>
+ <body>
+ <!-- Division container contains all the content of page with width 100%-->
+ <div class="container" style=" width: 100%;">
+  <!-- background image is  -->
+	 <div class="zimagery" style="background-image: url(pics/body-background.jpg);; background-size: cover;height: 300px;">
+	 <br><br><br>
+		 <div class="row">
+		 	<div class="col-sm-4"></div>
+			 <div class="col-sm-8">
+				 <div > 
+				     <!-- Text box will take city as a value.. -->
+					 <span ><input type="text" name="location" id="loc" value="Woodbridge"></span>
+					 <!-- Search button on submit will give the location related restaurants.. -->
+					 <span ><input type="button" class="button" id="locsubmit" value="Search"></span>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+ <br><br><br><br><br><br>
+	 <div class="row">
+	 	<div class="col-sm-2"></div>
+		 <div class="col-sm-8">
+		 <!-- It will show all the results.. -->
+		 	<div id="showResult"> </div>
+		 <br><br>
+		 	<div class="col-sm-2"></div>			
+		 </div>
+	 </div>  
+ </div> 
+ 
+ <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Geolocation/1.0.50/jquery.geolocation.min.js"></script>
+ <!-- JS file linked to the page -->
+ <script type="text/javascript" src="zomato.js"></script>
+ <script type="text/javascript" src="jquery.geocomplete.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAaUIZa4HjgEbLo3bY0of-mw20-rwysDs&libraries=places"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+#loc{
+	width: 300px; /*Setting width of location textbox */
+}
+.container{
+    display:inline-block;
+    margin: auto;
+    width: 100%;
+}
+.zimagery{
+    width:100%;
+    height:100px;
+    float:left ;
+}	
+.nowrap{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap
+}
+.left{
+	float:left
+}
+.zblack{
+	color:#33373D;
+}
+.restaurant-name{
+    color:#cb202d; 
+	font-weight: bold;
+	font-weight:700;
+	font-size:24px
+}
+.reviews{
+	text-align: right;
+    float:right;
+}
+.divider{
+    color:grey;
+    border-top:1px solid ;
+ }
+.grey-text{
+	color:#89959B
+}
+.fontsize5{
+	font-size:12px
+}
+.cardContent{
+	border:2px dashed lightgrey;
+	padding: 20px;
+}
+.center{
+    margin-top: 100px;
+}
+.button{
+    background-color: #cb202d;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

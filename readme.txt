@@ -1,0 +1,1 @@
+This project enables the user to enter any loction on the website and displays the restaurant details.
