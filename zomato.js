@@ -11,7 +11,8 @@ dynamically replaced with the results obtained from the zomato api..
 var htmlTemplate=('<br><br><br> <div class="cardContent">'+
 '<div class="row">'+
 	'<div class="col-sm-3">'+
-		'<a href="$$imagelink" class="feat-img " style="  background-image:url(https://b.zmtcdn.com/images/placeholder_200.png);" data-original="https://b.zmtcdn.com/images/placeholder_200.png?output-format=webp">'+
+		'<a href="$$imagelink">'+
+		 '<img src="$$thumb" class="feat-img" '+
 		'</a>'+
 	'</div>'+
 	'<div>'+
@@ -54,6 +55,7 @@ on the location entered in the location textbox..*/
 function getEntityDetailsBasedOnLocation(callback) {
 	var url="https://developers.zomato.com/api/v2.1/locations";
 	var city=$("#loc").val();
+	city=city.substring(0,city.indexOf(','));
 	//Setting the search api parameters.. 
     var searchQ = {
 		    apikey:'95adb6f09319ee2ad8f284f39dfb7d4b',
@@ -99,7 +101,11 @@ function showRestaurantData (data) {
 		   htmlTemplate1=htmlTemplate1.replace("$$rating",item.restaurant.user_rating.aggregate_rating);
 		   htmlTemplate1=htmlTemplate1.replace("$$vote",item.restaurant.user_rating.votes);
 		   htmlTemplate1=htmlTemplate1.replace("$$cuisines",item.restaurant.cuisines);
-
+           //Setting the default image in case there is no image returned from API for this restaurant..
+           if (item.restaurant.thumb===""){
+           	item.restaurant.thumb="https://b.zmtcdn.com/images/placeholder_200.png";
+           }
+           htmlTemplate1=htmlTemplate1.replace("$$thumb",item.restaurant.thumb);
 		   val+=htmlTemplate1;
 	 })
 	$("#showResult").html(val);	
