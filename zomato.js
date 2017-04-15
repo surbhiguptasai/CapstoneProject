@@ -8,8 +8,8 @@ Section of 3 is used to display the image,
 all the variables like restaurant name,link are represented by $$ and will be 
 dynamically replaced with the results obtained from the zomato api..
 */
-var htmlTemplate=('<br><br><br> <div class="cardContent">'+
-'<div class="row">'+
+var htmlTemplate=('<br><br><br> <div class="cardContent" style="background-image:  url(pics/card5.jpg);opacity:1;background-repeat: no-repeat;background-size: auto;">'+
+'<div class="row" >'+
 	'<div class="col-sm-3">'+
 		'<a href="$$imagelink">'+
 		 '<img src="$$thumb" class="feat-img" '+
@@ -24,7 +24,7 @@ var htmlTemplate=('<br><br><br> <div class="cardContent">'+
 			'<a class="zblack " title="Restaurants in Woodbridge" ><b>$$city</b></a></div>'+
 		'<div class="row">$$address</div></div>'+
 		'<div class="reviews col-sm-2 nowrap">'+
-			'<a href="">$$rating</a>'+
+		'<div><span style="width:55px;height:55px;background-color:#$$textcolor;color:white">$$rating</span></div>'+
 		'<div><span>Votes:$$vote</span></div>'+
 		'<!--  <div><a>10 reviews</a></div> -->'+
 		'</div>'+
@@ -32,14 +32,14 @@ var htmlTemplate=('<br><br><br> <div class="cardContent">'+
 		'</div><br>'+
 		'<div class="divider row"></div><br>'+
 	'<div class="row">'+
-		'<div><span class="fontsize5 grey-text col-sm-3" >Cuisines: </span><span class="col-sm-7 left"><a title="Japanese" >$$cuisines</a></span></div>'+
+		'<div><span class="fontsize5  col-sm-3" >Cuisines: </span><span class="col-sm-7 left">$$cuisines</span></div>'+
 		'</div>'+
 			'<div class="row">'+
             '<div>'+
-      			'<span class="fontsize5 grey-text col-sm-3" >Cost:</span>'+
+      			'<span class="fontsize5  col-sm-3" >Average Cost for Two:</span>'+
 				'<span class="col-sm-7 left">'+
 				''+
-				'$$</span>'+
+				'$$currency $$average_cost_for_two</span>'+
 				'</div></div>'+
 				'<!--   <div class="row">                      '+
 				'<div >'+
@@ -50,14 +50,23 @@ var htmlTemplate=('<br><br><br> <div class="cardContent">'+
 						'</div>'+
 		'</div> -->	</div>'+
         '');
+/*Validation for city */
+function validateInput(city)
+{
+	var regexp1=new RegExp("^[a-zA-Z\\u0080-\\u024F.]+((?:[ -.|'])[a-zA-Z\\u0080-\\u024F]+)*$");
+	var validate=false;
+	if(regexp1.test($.trim(city)))
+		{
+			validate=true;
+		}
+		return validate;
+}
+
 /*This function is responsible for retriving the entity details based 
 on the location entered in the location textbox..*/
-function getEntityDetailsBasedOnLocation(callback) {
+function getEntityDetailsBasedOnLocation(city,callback) {
 	var url="https://developers.zomato.com/api/v2.1/locations";
-	var city=$("#loc").val();
-	city=city.substring(0,city.indexOf(',') === -1 ? city.length : city.indexOf(','));
-	
-	//Setting the search api parameters.. 
+		//Setting the search api parameters.. 
     var searchQ = {
 		    apikey:'95adb6f09319ee2ad8f284f39dfb7d4b',
 		    query: city
@@ -65,7 +74,8 @@ function getEntityDetailsBasedOnLocation(callback) {
        		//firing ajax request..
     $.getJSON(url, searchQ, callback);
 }
-/*This function is responsible for retriving the restaurant details from zomato api..*/
+/*This function is responsible for retriving the restaurant details 
+from zomato api..*/
 function getRestaurantDetailFromAPI (data) {
 	var entityID="";
 	var entityType="";
@@ -86,8 +96,8 @@ function getRestaurantDetailFromAPI (data) {
   		//firing ajax request..
   $.getJSON(url, searchQ, showRestaurantData);
 } 
-/*This function leverages the HTML templete and data retrieved from the zomato 
-api and modify the html templete for each of the results obtained..
+/*This function leverages the HTML templete and data retrieved from the 
+zomato api and modify the html templete for each of the results obtained..
 It then sets the html formed into the div to be displayed on html page..*/
 function showRestaurantData (data) {
 	   var val="";
@@ -102,30 +112,58 @@ function showRestaurantData (data) {
 		   htmlTemplate1=htmlTemplate1.replace("$$rating",item.restaurant.user_rating.aggregate_rating);
 		   htmlTemplate1=htmlTemplate1.replace("$$vote",item.restaurant.user_rating.votes);
 		   htmlTemplate1=htmlTemplate1.replace("$$cuisines",item.restaurant.cuisines);
-           //Setting the default image in case there is no image returned from API for this restaurant..
+           htmlTemplate1=htmlTemplate1.replace("$$currency",item.restaurant.currency);
+           htmlTemplate1=htmlTemplate1.replace("$$average_cost_for_two",item.restaurant.average_cost_for_two);
+           htmlTemplate1=htmlTemplate1.replace("$$textcolor",item.restaurant.user_rating.rating_color);
+           /*Setting the default image in case there is no image returned 
+           from API for this restaurant..*/
            if (item.restaurant.thumb===""){
            	item.restaurant.thumb="https://b.zmtcdn.com/images/placeholder_200.png";
            }
            htmlTemplate1=htmlTemplate1.replace("$$thumb",item.restaurant.thumb);
 		   val+=htmlTemplate1;
-	 })
+	})
 	$("#showResult").html(val);	
 }
 
 // Function executes on click of search button and 
 // call getEntityDetailsBasedOnLocation function
 function userSubmit() {	
-	$("#locsubmit").click(function(event) {
-		getEntityDetailsBasedOnLocation(getRestaurantDetailFromAPI);
+	$("#locsubmit").on('click',function(event) {
+        triggerEvent();
 	});
-}
 
+	$(document).ajaxStart(function(){
+        $("#wait").css("display", "block");
+    });
+    $(document).ajaxComplete(function(){
+        $("#wait").css("display", "none");
+    });
+}
+/*Function will execute triggerEvent on city if it gets the correct format of city
+it will show the list otherwise it will show errormessage.*/
+function triggerEvent()
+{
+        var city=$("#loc").val();
+	    city=city.substring(0,city.indexOf(',') === -1 ? city.length : city.indexOf(','));
+		if(validateInput(city))
+         {
+		  getEntityDetailsBasedOnLocation(city,getRestaurantDetailFromAPI);
+         }
+        else
+         {
+         	$("#showResult").html("<p style='color:red;margin-left:220px;font-size: 20px;font-style: italic;'>Please enter valid City e.g. Edison, NJ !!!<p> ");
+         }
+}
 // IFFY calling userSubmit ..
 $(function(){
 	$("#loc").geocomplete({
          details: ".geo-details",
          detailsAttribute: "data-geo"
-    });
+    }).bind("geocode:result", function(event, result){ 
+    //Attaching Trigger Event as User selects location, 
+    //it will fire Ajax call using triggerEvent method.
+    triggerEvent();
+  });
 	userSubmit();
-
 });

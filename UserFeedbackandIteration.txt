@@ -1,3 +1,18 @@
 1.Make the page responsive.
 2.Not working when user enters half of the location(eg,Woodbridge instead of "Woodbridge Township, NJ, United States").
 3.Images of the restaurants are not displayed.
+
+
+
+1.Change the title of the page.
+2.Provided the default text in the textbox for entering the location.
+3.Provided the heading tag to reflect the usablity of the site.
+4.Apply the appropriate validations on city attribute.
+5.Provided the feature to display the error message in case the city is invalid.
+6.Provided the feature to display the loading immage while the page renders the request.
+7.Apply the background image and color on the list of the results.
+8.Also provided the feature to avoid the double click for searching the results.
+9.Applied the background color retreived from the API on the user rating attribute.
+10.Improve the population of cost for two on the result page. 
+11.Corrected the sizes of textbox and search botton.
+
