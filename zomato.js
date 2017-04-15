@@ -18,7 +18,7 @@ var htmlTemplate=('<br><br><br> <div class="cardContent" style="background-image
 	'<div>'+
 		'<div class="col-sm-7">'+
 			'<div class="row">'+
-				'<a class="restaurant-name nowrap " href="$$linkname">$$name</a>'+
+				'<a class="restaurant-name  " href="$$linkname">$$name</a>'+
 			'</div>'+
 		'<div class="row">'+
 			'<a class="zblack " title="Restaurants in Woodbridge" ><b>$$city</b></a></div>'+
