@@ -68,6 +68,12 @@
 .middle{
     color:white;
     text-align: center;
+    font-style: italic;
+    font-family: cursive;
+    font-size: 45px;
+    font-weight: bold;
+
+
 
 }
 #result
