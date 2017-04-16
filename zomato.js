@@ -8,11 +8,11 @@ Section of 3 is used to display the image,
 all the variables like restaurant name,link are represented by $$ and will be 
 dynamically replaced with the results obtained from the zomato api..
 */
-var htmlTemplate=(' <div class="cardContent col-xs-12">'+
+var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 '<div class="row" >'+
 
 
-	'<div class="col-xs-3">'+
+	'<div class="col-xs-4">'+
 		'<a href="$$imagelink">'+
 		 '<img src="$$thumb" class="feat-img" >'+
 		'</a>'+
@@ -20,7 +20,7 @@ var htmlTemplate=(' <div class="cardContent col-xs-12">'+
 
 
 	'<div>'+
-		'<div class="col-xs-7">'+
+		'<div class="col-xs-6">'+
 			'<div class="row">'+
 				'<a class="restaurant-name  " href="$$linkname">$$name</a>'+
 			'</div>'+
@@ -47,15 +47,15 @@ var htmlTemplate=(' <div class="cardContent col-xs-12">'+
 
 		'<div class="divider row"></div><br>'+
 	'<div class="row">'+
-		'<div><span class="fontsize5  col-xs-3" >Cuisines: </span><span class="col-xs-7 fontsize5 left">$$cuisines</span></div>'+
+		'<div><span class="fontsize5  zblack col-xs-4" ><b>Cuisines: </b></span><span class="col-xs-6 fontsize5 left">$$cuisines</span><span class="col-xs-2"></span></div>'+
 		'</div>'+
 			'<div class="row">'+
             '<div>'+
-      			'<span class="fontsize5  col-xs-3" >Avg. Cost for Two:</span>'+
-				'<span class="col-xs-7 left fontsize5">'+
+      			'<span class="fontsize5  zblack col-xs-4" ><b>Avg. Cost for Two:</b></span>'+
+				'<span class="col-xs-6 left fontsize5"> '+
 				''+
 				'$$currency $$average_cost_for_two</span>'+
-				'</div></div>'+
+				'<span class="col-xs-2"></span></div></div>'+
 				'<!--   <div class="row">                      '+
 				'<div >'+
 					'<span class="fontsize5  grey-text col-xs-3">Hours:</span>'+
