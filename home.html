@@ -16,22 +16,23 @@
  </head>
  <body>
  <!-- Division container contains all the content of page with width 100%-->
- <div class="container" style=" width: 100%;">
+ <div class="container1">
 
   <!-- background image is  -->
-	 <div id="img" class="zimagery" style="background-image:  url(pics/body-background.jpg)  ; width:100%;  ">
-	 <br><br><br>
-		 <div class="row">
-		  <h1 class="middle">Find the best restaurants, cafe's and bars</h1>
-		 	<div class="col-sm-4"></div>
-			 <div class="col-sm-8">
-				 <div  style='align:center'> 
-                    
+	 <div id="img" class="zimagery">
+	
+		 <div class="row ">
+		  <h4 class="col-xs-12 middle  fontsize10 margintop">   Find the best restaurants, cafe's and bars</h4>
+		 	<!-- <div class="col-xs-2"></div> -->
+			 <div class="col-xs-12 middletextbox">
+				 <div   class="fontsize5 inlineb " > 
+                    	
+
 				     <!-- Text box will take city as a value.. -->
-					 <span> <input type="text"   style="background-image: url(pics/locImage.png);background-size: 20% 100%; background-repeat: no-repeat;padding-left: 10%;filter: grayscale(80%);  " name="location" id="loc"  placeholder= "Enter City e.g. Edison"> </span>
+					  <input type="text" class="locationImage"    name="location" id="loc"  placeholder= "Enter City e.g. Edison"> 
 					
 					 <!-- Search button on submit will give the location related restaurants.. -->
-					 <span ><input type="button"  id="locsubmit" value="Search"></span>
+					<input type="button"  id="locsubmit" value="Search">
 				 </div>
 			 </div>
 		 </div>
@@ -41,13 +42,13 @@
 
 <div id="result">
 	 <div  class="row">
-	 	<div class="col-sm-2"></div>
-		 <div class="col-sm-8" >
+	 	<div class="col-xs-2"></div>
+		 <div class="col-xs-8" >
 		
 		 <!-- It will show all the results.. -->
 		 	<div id="showResult"> </div>
 		 <br><br>
-		 	<div class="col-sm-2"></div>			
+		 	<div class="col-xs-2"></div>			
 		 </div>
 	 </div>  
  </div> 

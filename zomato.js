@@ -8,47 +8,62 @@ Section of 3 is used to display the image,
 all the variables like restaurant name,link are represented by $$ and will be 
 dynamically replaced with the results obtained from the zomato api..
 */
-var htmlTemplate=('<br><br><br> <div class="cardContent" style="background-image:  url(pics/card5.jpg);opacity:1;background-repeat: no-repeat;background-size: auto;">'+
+var htmlTemplate=(' <div class="cardContent col-xs-12">'+
 '<div class="row" >'+
-	'<div class="col-sm-3">'+
+
+
+	'<div class="col-xs-3">'+
 		'<a href="$$imagelink">'+
-		 '<img src="$$thumb" class="feat-img" '+
+		 '<img src="$$thumb" class="feat-img" >'+
 		'</a>'+
 	'</div>'+
+
+
 	'<div>'+
-		'<div class="col-sm-7">'+
+		'<div class="col-xs-7">'+
 			'<div class="row">'+
 				'<a class="restaurant-name  " href="$$linkname">$$name</a>'+
 			'</div>'+
 		'<div class="row">'+
-			'<a class="zblack " title="Restaurants in Woodbridge" ><b>$$city</b></a></div>'+
-		'<div class="row">$$address</div></div>'+
-		'<div class="reviews col-sm-2 nowrap">'+
-		'<div><span style="width:55px;height:55px;background-color:#$$textcolor;color:white">$$rating</span></div>'+
-		'<div><span>Votes:$$vote</span></div>'+
+			'<a class="zblack fontsize5" title="Restaurants in Woodbridge" ><b>$$city</b></a></div>'+
+		'<div class="row fontsize5">$$address</div></div>'+
+
+
+
+
+
+		'<div class="reviews col-xs-2 fontsize5">'+
+		'<div><span style="background-color:#$$textcolor;color:white">$$rating</span></div>'+
+		'<div >Votes $$vote</div>'+
+
 		'<!--  <div><a>10 reviews</a></div> -->'+
 		'</div>'+
 		'</div>'+
 		'</div><br>'+
+
+
+
+
+
 		'<div class="divider row"></div><br>'+
 	'<div class="row">'+
-		'<div><span class="fontsize5  col-sm-3" >Cuisines: </span><span class="col-sm-7 left">$$cuisines</span></div>'+
+		'<div><span class="fontsize5  col-xs-3" >Cuisines: </span><span class="col-xs-7 fontsize5 left">$$cuisines</span></div>'+
 		'</div>'+
 			'<div class="row">'+
             '<div>'+
-      			'<span class="fontsize5  col-sm-3" >Average Cost for Two:</span>'+
-				'<span class="col-sm-7 left">'+
+      			'<span class="fontsize5  col-xs-3" >Avg. Cost for Two:</span>'+
+				'<span class="col-xs-7 left fontsize5">'+
 				''+
 				'$$currency $$average_cost_for_two</span>'+
 				'</div></div>'+
 				'<!--   <div class="row">                      '+
 				'<div >'+
-					'<span class="fontsize5  grey-text col-sm-3">Hours:</span>'+
-						'<span class="col-sm-7 left">'+
+					'<span class="fontsize5  grey-text col-xs-3">Hours:</span>'+
+						'<span class="col-xs-7 left">'+
 						'(Sun),Lunch, Dinner (Mon-Sat)'+
 						'</span>'+
 						'</div>'+
-		'</div> -->	</div>'+
+		'</div> -->	</div> <br> <br>'+
         '');
 /*Validation for city */
 function validateInput(city)
@@ -118,7 +133,7 @@ function showRestaurantData (data) {
            /*Setting the default image in case there is no image returned 
            from API for this restaurant..*/
            if (item.restaurant.thumb===""){
-           	item.restaurant.thumb="https://b.zmtcdn.com/images/placeholder_200.png";
+           	item.restaurant.thumb="pics/thumbImage.png";
            }
            htmlTemplate1=htmlTemplate1.replace("$$thumb",item.restaurant.thumb);
 		   val+=htmlTemplate1;

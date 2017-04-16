@@ -1,15 +1,48 @@
 * {
   box-sizing: border-box;
 }
-.container{
-    display:inline-block;
-    margin: auto;
-    width: auto;
+.container1{
+    width: 100%;
 }
+.margintop
+{
+    margin-top: 2em;
+}
+.wait
+{
+    display:none;
+    width:69px;
+    height:89px;
+    border:1px solid black;
+    position:absolute;
+    top:50%;
+    left:50%;
+    padding:2px;
+}
+
+
 .zimagery{
-    width:100%;
-    height:300px;
+    /*width:60%;*/
+    
     z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    background-image:  url(pics/body-background.jpg)  ; 
+    width:100%;
+
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.feat-img{
+     z-index: 0;
     top: 0;
     bottom: 0;
     left: 0;
@@ -23,15 +56,7 @@
     -o-background-size: cover;
     background-size: cover;
 }
-.feat-img{
-    width: 60%;
-    height: 100px;
-}
-.nowrap{
-	overflow:hidden;
-	text-overflow:ellipsis;
-	white-space:nowrap
-}
+
 .left{
 	float:left
 }
@@ -42,11 +67,12 @@
     color:#cb202d; 
 	font-weight: bold;
 	font-weight:700;
-	font-size:24px
+	font-size:1em;
 }
 .reviews{
-	text-align: right;
+	/*text-align: right;*/
     float:right;
+
 }
 .divider{
     color:grey;
@@ -55,12 +81,38 @@
 .grey-text{
 	color:#89959B
 }
+.locationImage
+{
+background-image: url(pics/locImage.png);
+background-size: 10% 100%; 
+background-repeat: no-repeat;
+padding: 20px;
+filter: grayscale(80%);
+}
+
+.fontsize3{
+    font-size:.5em;
+}
 .fontsize5{
-	font-size:12px
+	font-size:.6em;
+}
+.fontsize10{
+    font-size:1.2em;
+}
+.inlineb
+{
+    display: inline-block;
+    margin:0 auto;
 }
 .cardContent{
 	border:2px dashed grey;
 	padding: 20px;
+    margin-top: .25em;
+   background-image:  url(pics/card5.jpg);
+   opacity:1;
+   background-repeat: no-repeat;
+   background-size: auto;
+
 }
 .center{
     margin-top: 100px;
@@ -70,11 +122,14 @@
     text-align: center;
     font-style: italic;
     font-family: cursive;
-    font-size: 45px;
+    /*font-size: 45px;*/
     font-weight: bold;
+}
 
+.middletextbox{
 
-
+    text-align: center;
+   
 }
 #result
 {
@@ -89,8 +144,10 @@ input[type="button"]{
     display: inline-block;
     padding: 10px 15px;
     text-align: center;
+    
+
     text-decoration: none;
-    font-size: 16px;
+   /* font-size: 16px;*/
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 0;
@@ -99,58 +156,151 @@ input[type="button"]{
     max-width: 100%;
 }
 input[type="text"] {
-        // needed
+        /*// needed*/
         display: inline-block;
         padding: 10px 15px;
-        font-size: 16px;
+        /*font-size: 16px;*/
         border-radius: 0;
         -webkit-appearance: none;
         border: 1px solid transparent; 
         font-style: italic;
         max-width: 100%;
+        padding-left:1.5em;
     }
-/* For mobile phones:*/
- @media only screen and (min-width: 320px) {
-.col-*-12 {
-  width: 100%;
+
+
+    /*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+
+
+
+
 }
-.col-*-11 {
-  width: 91.66666667%;
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+    .feat-img{
+    max-width:80% ;
+    height:auto;
 }
-.col-*-10 {
-  width: 83.33333333%;
+
+.restaurant-name{
+    color:#cb202d; 
+    font-weight: bold;
+    font-weight:700;
+    font-size:1.5em;
 }
-.col-*-9 {
-  width: 75%;
+.fontsize3{
+    font-size:.8em;
 }
-.col-*-8 {
-  width: 66.66666667%;
+.fontsize5{
+    font-size:.8em;
 }
-.col-*-7 {
-  width: 58.33333333%;
+.fontsize10{
+    font-size:2em;
 }
-.col-*-6 {
-  width: 50%;
-}
-.col-*-5 {
-  width: 41.66666667%;
-}
-.col-*-4 {
-  width: 33.33333333%;
-}
-.col-*-3 {
-  width: 25%;
-}
-.col-*-2 {
-  width: 16.66666667%;
-}
-.col-*-1 {
-  width: 8.33333333%;
-}
-}    
-     /*For desktop:*/
-[class*="col-sm-"] 
+
+.inlineb
 {
-        width: 100%;
+    display: inline-block;
+    
 }
+.cardContent{
+  margin-top: .75em;
+}
+
+.locationImage
+{
+background-image: url(pics/locImage.png);
+background-size: 20% 100%; 
+background-repeat: no-repeat;
+padding-left: 20%;
+filter: grayscale(80%);
+}
+
+input[type="text"] {
+   
+        padding-left:2em;
+    }
+
+
+.zimagery{
+    height: 15em; 
+  
+}
+  
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+.feat-img{
+    max-width:100% ;
+    height:auto;
+}
+
+.restaurant-name{
+    color:#cb202d; 
+    font-weight: bold;
+    font-weight:700;
+    font-size:2em;
+}
+.fontsize3{
+    font-size:1em;
+}
+.fontsize5{
+    font-size:1em;
+}
+.fontsize10{
+    font-size:3em;
+}
+
+.inlineb
+{
+    display: inline-block;
+    
+}
+.cardContent{
+  margin-top: 1em;
+}
+
+.locationImage
+{
+background-image: url(pics/locImage.png);
+background-size: 20% 100%; 
+background-repeat: no-repeat;
+padding-left: 20%;
+filter: grayscale(80%);
+}
+
+input[type="text"] {
+   
+        padding-left:3em;
+    }
+
+
+.zimagery{
+    height: 20em; 
+  
+}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+
 
