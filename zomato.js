@@ -167,7 +167,7 @@ function triggerEvent()
          }
         else
          {
-         	$("#showResult").html("<p style='color:red;margin-left:220px;font-size: 20px;font-style: italic;'>Please enter valid City e.g. Edison, NJ !!!<p> ");
+         	$("#showResult").html("<p style='color:red;font-size: 20px;font-style: italic;text-align:center;padding:20px 0'>Please enter valid City e.g. Edison, NJ !!!<p> ");
          }
 }
 // IFFY calling userSubmit ..

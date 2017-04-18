@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -50,8 +51,7 @@
     background-size: cover;
 }
 .feat-img{
-    width:200px;
-
+    /*width:200px;
      z-index: 0;
     top: 0;
     bottom: 0;
@@ -65,30 +65,30 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    content: " ";
+    content: " ";*/
     display: block; 
-    width: 100%; 
-    padding-top: 4.918%; /* slope */
-     width:200px;
-    height:80px;
+    /*width: 100%; */
+    padding-bottom: 20px; /* slope */
+     width:100%;
+    height:auto;
 
    
 }
 
 .left{
-	float:left
+    float:left
 }
 .zblack{
-	color:#33373D;
+    color:#33373D;
 }
 .restaurant-name{
     color:#cb202d; 
-	font-weight: bold;
-	font-weight:700;
-	font-size:1em;
+    font-weight: bold;
+    font-weight:700;
+    font-size:1em;
 }
 .reviews{
-	/*text-align: right;*/
+    /*text-align: right;*/
     float:right;
 
 }
@@ -97,7 +97,7 @@
     border-top:1px solid ;
  }
 .grey-text{
-	color:#89959B
+    color:#89959B
 }
 .locationImage
 {
@@ -112,7 +112,7 @@ filter: grayscale(80%);
     font-size:.6em;
 }
 .fontsize5{
-	font-size:.8em;
+    font-size:.8em;
 }
 .fontsize10{
     font-size:1.7em;
@@ -123,8 +123,8 @@ filter: grayscale(80%);
     margin:0 auto;
 }
 .cardContent{
-	border:2px dashed grey;
-	padding: 20px;
+    border:2px dashed grey;
+    padding: 20px;
     margin-top: .25em;
    background-image:  url(pics/card10.jpg);
    opacity:1;
@@ -325,7 +325,3 @@ input[type="text"] {
 @media only screen and (min-width : 1200px) {
 
 }
-
-
-
-
