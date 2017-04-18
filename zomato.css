@@ -50,7 +50,7 @@
     background-size: cover;
 }
 .feat-img{
-    width:200px;
+    /*width:200px;
 
      z-index: 0;
     top: 0;
@@ -65,12 +65,12 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    content: " ";
+    content: " ";*/
     display: block; 
-    width: 100%; 
-    padding-top: 4.918%; /* slope */
-     width:200px;
-    height:80px;
+    /*width: 100%; */
+    padding-bottom: 20px; /* slope */
+     width:100%;
+    height:auto;
 
    
 }
