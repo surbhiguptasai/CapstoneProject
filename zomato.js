@@ -12,7 +12,7 @@ var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 '<div class="row" >'+
 
 
-	'<div class="col-xs-4">'+
+	'<div class="col-xs-5">'+
 		'<a href="$$imagelink">'+
 		 '<img src="$$thumb" class="feat-img" >'+
 		'</a>'+
@@ -20,7 +20,7 @@ var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 
 
 	'<div>'+
-		'<div class="col-xs-6">'+
+		'<div class="col-xs-6 namer">'+
 			'<div class="row">'+
 				'<a class="restaurant-name  " href="$$linkname">$$name</a>'+
 			'</div>'+
@@ -47,7 +47,7 @@ var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 
 		'<div class="divider row"></div><br>'+
 	'<div class="row">'+
-		'<div><span class="fontsize5  zblack col-xs-4" ><b>Cuisines: </b></span><span class="col-xs-6 fontsize5 left">$$cuisines</span><span class="col-xs-2"></span></div>'+
+		'<div><span class="fontsize5  zblack col-xs-4" ><b>Cuisines: </b></span><span class="col-xs-6 fontsize5 ">$$cuisines</span></div>'+
 		'</div>'+
 			'<div class="row">'+
             '<div>'+
