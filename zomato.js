@@ -172,7 +172,7 @@ function triggerEvent()
 }
 function loadDefaultPage()
 {
-        var city="Edison";
+        var city="New York";
 	    city=city.substring(0,city.indexOf(',') === -1 ? city.length : city.indexOf(','));
 		
 		  getEntityDetailsBasedOnLocation(city,getRestaurantDetailFromAPI);
