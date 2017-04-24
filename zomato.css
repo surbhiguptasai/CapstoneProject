@@ -126,7 +126,7 @@ filter: grayscale(80%);
     border:2px dashed grey;
     padding: 20px;
     margin-top: .25em;
-   background-image:  url(pics/card10.jpg);
+   background-image:  url(pics/card4_1.jpg);
    opacity:1;
    background-repeat: no-repeat;
    background-size: auto;
@@ -151,7 +151,7 @@ filter: grayscale(80%);
 }
 #result
 {
-    background-color: lightgray;
+    background-color: #FCE6C9;
     height:auto;
     margin:0
 }

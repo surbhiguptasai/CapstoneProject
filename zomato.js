@@ -33,7 +33,7 @@ var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 
 
 		'<div class="reviews col-xs-2 fontsize5">'+
-		'<div><span style="background-color:#$$textcolor;color:white">$$rating</span></div>'+
+		'<div><span style="background-color:#cb202d;color:white;padding:2px;">$$rating</span></div>'+
 		'<div >Votes $$vote</div>'+
 
 		'<!--  <div><a>10 reviews</a></div> -->'+
@@ -129,7 +129,7 @@ function showRestaurantData (data) {
 		   htmlTemplate1=htmlTemplate1.replace("$$cuisines",item.restaurant.cuisines);
            htmlTemplate1=htmlTemplate1.replace("$$currency",item.restaurant.currency);
            htmlTemplate1=htmlTemplate1.replace("$$average_cost_for_two",item.restaurant.average_cost_for_two);
-           htmlTemplate1=htmlTemplate1.replace("$$textcolor",item.restaurant.user_rating.rating_color);
+           //htmlTemplate1=htmlTemplate1.replace("$$textcolor",red);
            /*Setting the default image in case there is no image returned 
            from API for this restaurant..*/
            if (item.restaurant.thumb===""){
@@ -170,6 +170,14 @@ function triggerEvent()
          	$("#showResult").html("<p style='color:red;font-size: 20px;font-style: italic;text-align:center;padding:20px 0'>Please enter valid City e.g. Edison, NJ !!!<p> ");
          }
 }
+function loadDefaultPage()
+{
+        var city="Edison";
+	    city=city.substring(0,city.indexOf(',') === -1 ? city.length : city.indexOf(','));
+		
+		  getEntityDetailsBasedOnLocation(city,getRestaurantDetailFromAPI);
+        
+}
 // IFFY calling userSubmit ..
 $(function(){
 	$("#loc").geocomplete({
@@ -181,4 +189,5 @@ $(function(){
     triggerEvent();
   });
 	userSubmit();
+	loadDefaultPage();
 });
