@@ -112,7 +112,8 @@ filter: grayscale(80%);*/
     font-size:.6em;
 }
 .fontsize5{
-    font-size: 14px;;
+    font-size: 14px;
+
 }
 .fontsize10{
     font-size:1.7em;
@@ -120,7 +121,8 @@ filter: grayscale(80%);*/
 .inlineb
 {
     display: inline-block;
-    margin:0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .cardContent{
     border:2px dashed grey;
@@ -259,7 +261,8 @@ input[type="text"] {
 .inlineb
 {
     display: inline-block;
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .cardContent{
   margin-top: .75em;
@@ -318,7 +321,8 @@ input[type="text"] {
 .inlineb
 {
     display: inline-block;
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .cardContent{
   margin-top: 1em;
