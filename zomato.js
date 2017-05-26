@@ -13,7 +13,7 @@ var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 
 
 	'<div class="col-xs-5">'+
-		'<a href="$$imagelink">'+
+		'<a href="$$imagelink" target="_blank">'+
 		 '<img src="$$thumb" class="feat-img" >'+
 		'</a>'+
 	'</div>'+
@@ -22,7 +22,7 @@ var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 	'<div>'+
 		'<div class="col-xs-6 namer">'+
 			'<div class="row">'+
-				'<a class="restaurant-name  " href="$$linkname">$$name</a>'+
+				'<a class="restaurant-name  " href="$$linkname" target="_blank">$$name</a>'+
 			'</div>'+
 		'<div class="row">'+
 			'<a class="zblack fontsize5" title="Restaurants in Woodbridge" ><b>$$city</b></a></div>'+
@@ -39,13 +39,13 @@ var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 		'<!--  <div><a>10 reviews</a></div> -->'+
 		'</div>'+
 		'</div>'+
-		'</div><br>'+
+		'</div>'+
 
 
 
 
 
-		'<div class="divider row"></div><br>'+
+		'<div class="divider row"></div>'+
 	'<div class="row">'+
 		'<div><span class="fontsize5  zblack col-xs-4" ><b>Cuisines: </b></span><span class="col-xs-6 fontsize5 ">$$cuisines</span></div>'+
 		'</div>'+
@@ -63,7 +63,7 @@ var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 						'(Sun),Lunch, Dinner (Mon-Sat)'+
 						'</span>'+
 						'</div>'+
-		'</div> -->	</div> <br> <br>'+
+		'</div> -->	</div> '+
         '');
 /*Validation for city */
 function validateInput(city)
@@ -167,7 +167,7 @@ function triggerEvent()
          }
         else
          {
-         	$("#showResult").html("<p style='color:red;font-size: 20px;font-style: italic;text-align:center;padding:20px 0'>Please enter valid City e.g. Edison, NJ !!!<p> ");
+         	$("#showResult").html("<p style='color:red;font-size: 20px;text-align:center;padding:20px 0'>Please enter valid City e.g. Edison, NJ<p> ");
          }
 }
 function loadDefaultPage()
