@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 .container1{
-    width: 100%;
+    width: auto;
+    overflow:hidden;
 }
 .marginleft
 {
@@ -175,22 +176,59 @@ input[type="button"]{
     border: 1px solid transparent;
     max-width: 100%;
 }
+.btn-primary {
+    color: black;
+    background-color:#fecfbb;
+    border-color: black;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
 input[type="text"] {
         /*// needed*/
         display: inline-block;
-        padding: 10px 15px;
+        padding: 5px 5px;
         /*font-size: 16px;*/
         border-radius: 0;
         -webkit-appearance: none;
         border: 1px solid transparent; 
         font-style: italic;
         max-width: 100%;
-        padding-left:1.5em;
+        /*padding-left:.5em;*/
     }
 
+footer{
+ 
+  /*padding: 1px  ;*/
+  /*background-color: #efefef;*/
+  text-align: center;
+  font-style: italic;
+  height: auto;
+  padding-left: 15px;
+  background-color: #FCE6C8;
+ margin-top: 10px;
 
-    /*==========  Mobile First Method  ==========*/
 
+    
+}
+/*==========  Mobile First Method  ==========*/
 .col-xs-5 {width: 100%;}
 .col-xs-6 {width: 40%;}
 .col-xs-2 {width: 20%;}
@@ -339,7 +377,7 @@ filter: grayscale(80%);*/
 
 input[type="text"] {
    
-        padding-left:3em;
+        padding-left:1em;
     }
 
 
