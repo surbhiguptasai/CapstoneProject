@@ -273,11 +273,11 @@ input[type="text"] {
 
 .locationImage
 {
-background-image: url(pics/locImage.png);
+/*background-image: url(pics/locImage.png);
 background-size: 20% 100%; 
 background-repeat: no-repeat;
 padding-left: 20%;
-filter: grayscale(80%);
+filter: grayscale(80%);*/
 }
 
 input[type="text"] {
@@ -330,11 +330,11 @@ input[type="text"] {
 
 .locationImage
 {
-background-image: url(pics/locImage.png);
+/*background-image: url(pics/locImage.png);
 background-size: 20% 100%; 
 background-repeat: no-repeat;
 padding-left: 20%;
-filter: grayscale(80%);
+filter: grayscale(80%);*/
 }
 
 input[type="text"] {
