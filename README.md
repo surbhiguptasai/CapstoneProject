@@ -27,7 +27,7 @@ Then open [`localhost:8000`](http://localhost:8000) in a browser.
 <p>It combines  data from Google Maps and Zomato to give users ability to search restaurant near any location.</p>
 <h2>Wireframes</h2>
 <p>Initial wireframes were created for each page. Mockups of all key processes were designed with user flow in mind.</p>
-<img src="public/images/restaurantsearcher-wireframes.png">
+<img src="pics/restaurantsearcher-wireframes.png">
 
 <h2>Technology</h2>
 <ul>
