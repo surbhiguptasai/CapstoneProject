@@ -126,7 +126,7 @@ filter: grayscale(80%);*/
     margin-bottom: 20px;
 }
 .cardContent{
-    border:2px dashed grey;
+    /*border:2px dashed grey;*/
     padding: 20px;
     margin-top: .25em;
    background-image:  url(pics/card4_1.jpg);
@@ -163,9 +163,9 @@ input[type="button"]{
     border: none;
     color: white;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 5px 15px;
     text-align: center;
-    
+
 
     text-decoration: none;
    /* font-size: 16px;*/
@@ -175,6 +175,10 @@ input[type="button"]{
     -webkit-appearance: none;
     border: 1px solid transparent;
     max-width: 100%;
+}
+input[type="button"]:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
 }
 .btn-primary {
     color: black;
@@ -333,7 +337,7 @@ input[type="text"] {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width : 600px) {
 
 .feat-img{
     max-width:100% ;
