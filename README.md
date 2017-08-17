@@ -48,5 +48,5 @@ Then open [`localhost:8000`](http://localhost:8000) in a browser.
 <ul>
   <li>The app is fully responsive and quickly adapts to all mobile, tablet, and desktop viewports.</li>
 </ul>
-<img src="public/images/restaurantsearcher-responsive.jpg">
+<img src="pics/restaurantsearcher-responsive.jpg">
 
