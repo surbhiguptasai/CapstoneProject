@@ -24,7 +24,6 @@ Then open [`localhost:8000`](http://localhost:8000) in a browser.
 </p>
 
 <h2>How it Works</h2>
-<h3>Record dreams</h3>
 <p>It combines  data from Google Maps and Zomato to give users ability to search restaurant near any location.</p>
 <h2>Wireframes</h2>
 <p>Initial wireframes were created for each page. Mockups of all key processes were designed with user flow in mind.</p>
@@ -49,5 +48,5 @@ Then open [`localhost:8000`](http://localhost:8000) in a browser.
 <ul>
   <li>The app is fully responsive and quickly adapts to all mobile, tablet, and desktop viewports.</li>
 </ul>
-<img src="public/images/restaurantsearcher-responsive.png">
+<img src="public/images/restaurantsearcher-responsive.jpg">
 
