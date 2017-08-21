@@ -1,33 +1,29 @@
 <h1>Restaurant Searcher</h1>
 <p><a href="https://surbhiguptasai.github.io/CapstoneProject/">Restaurant Searcher</a> is a responsive  app that combines data from <a href="https://developers.google.com/maps/">Google Maps API</a> and <a href="https://developers.zomato.com/api">Zomato API</a> to give users ability to search restaurant near any location..</p>
-<img src="pics/restaurantSearcherC1.jpg">
+<img src="pics/restaurantSearcherC1.png">
+
+## Features ##
+
+Users can:
+
+- Search restaurant near any location
+- Get links to restaurant websites that have further details about menu, timings etc.
+- Get restaurant ratings that helps user in picking restaurant of their choice.
+- Get average cost and Cuisine details to users that helps users for their restaurant choice.
+
 
 ## Getting started
 ### Installing
 ```
 >   git clone https://github.com/surbhiguptasai/CapstoneProject.git
 >   cd CapstoneProject
->   npm install
 ```
 ### Launching
-```
->   npm start
-```
-Then open [`localhost:8000`](http://localhost:8000) in a browser.
-### Testing
-```
->   npm run test
-```
+Open index.html in a browser.
 
-<h2>Introduction</h2>
-<p>The main focus of Restaurant Searcher is to help users find restaurants. It provides links to restaurant websites that have further details about menu, timings etc.
-</p>
-
-<h2>How it Works</h2>
-<p>It combines  data from Google Maps and Zomato to give users ability to search restaurant near any location.</p>
-<h2>Wireframes</h2>
+<h2>Mockups</h2>
 <p>Initial wireframes were created for each page. Mockups of all key processes were designed with user flow in mind.</p>
-<img src="pics/restaurantsearcher-wireframes.png">
+<img src="pics/restaurantsearcher-mockups1.png">
 
 <h2>Technology & API</h2>
 <ul>
@@ -46,5 +42,5 @@ Then open [`localhost:8000`](http://localhost:8000) in a browser.
 <ul>
   <li>The app is fully responsive and quickly adapts to all mobile, tablet, and desktop viewports.</li>
 </ul>
-<img src="pics/restaurantsearcher-responsive.jpg">
+<img src="pics/restaurantsearcher-responsive.png">
 
