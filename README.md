@@ -21,7 +21,7 @@ Users can:
 ### Launching
 Open index.html in a browser.
 
-<h2>Mockups</h2>
+<h2>WireFrames</h2>
 <p>Initial wireframes were created for each page. Mockups of all key processes were designed with user flow in mind.</p>
 <img src="pics/restaurantsearcher-wireframes.png">
 
