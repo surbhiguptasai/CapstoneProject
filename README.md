@@ -15,7 +15,7 @@ Users can:
 ## Getting started
 ### Installing
 ```
->   git clone https://github.com/surbhiguptasai/CapstoneProject.git
+>   git clone `
 >   cd CapstoneProject
 ```
 ### Launching
@@ -35,7 +35,7 @@ Open index.html in a browser.
   <li>Google Maps</li>
   <li>Zomato</li>
 </ul>
-<img src="pics/restaurantsearcher-tech.png">
+
 
 
 <h3>Responsive</h3>
