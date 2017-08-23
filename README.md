@@ -8,8 +8,8 @@ Users can:
 
 - Search restaurant near any location
 - Get links to restaurant websites that have further details about menu, timings etc.
-- Get restaurant ratings that helps user in picking restaurant of their choice.
-- Get average cost and Cuisine details to users that helps users for their restaurant choice.
+- Get restaurant ratings that help the user in picking a restaurant of their choice.
+- Get average cost and Cuisine details to users that help users for their restaurant choice.
 
 
 ## Getting started
@@ -40,7 +40,7 @@ Open index.html in a browser.
 
 <h3>Responsive</h3>
 <ul>
-  <li>The app is fully responsive and quickly adapts to all mobile, tablet, and desktop viewports.</li>
+  <p>The app is fully responsive and quickly adapts to all mobile, tablet, and desktop viewports.</p>
 </ul>
 <img src="pics/restaurantsearcher-responsive-1.png">
 
