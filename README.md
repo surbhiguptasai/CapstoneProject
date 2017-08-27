@@ -23,7 +23,7 @@ Open index.html in a browser.
 
 <h2>WireFrames</h2>
 <p>Initial wireframes were created for each page. Mockups of all key processes were designed with user flow in mind.</p>
-<img src="pics/restaurantsearcher-wireframes.png">
+<p align="center"><img src="pics/restaurantsearcher-wireframes.png"></p>
 
 <h2>Technology & API</h2>
 <ul>
@@ -42,5 +42,5 @@ Open index.html in a browser.
 <ul>
   <p>The app is fully responsive and quickly adapts to all mobile, tablet, and desktop viewports.</p>
 </ul>
-<img src="pics/restaurantsearcher-responsive-1.png">
+<p align="center"><img src="pics/restaurantsearcher-responsive-1.png"></p>
 
