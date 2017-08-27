@@ -42,5 +42,5 @@ Open index.html in a browser.
 <ul>
   <p>The app is fully responsive and quickly adapts to all mobile, tablet, and desktop viewports.</p>
 </ul>
-<p align="center"><img src="pics/restaurantsearcher-responsive-1.1.png"></p>
+<p align="center"><img src="pics/restaurantsearcher-responsive-1.2.png"></p>
 
