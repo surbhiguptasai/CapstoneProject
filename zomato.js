@@ -33,7 +33,7 @@ var htmlTemplate=(' <div class="cardContent col-xs-12 marginleft">'+
 
 
 		'<div class="reviews col-xs-2 fontsize5">'+
-		'<div><span style="background-color:#cb202d;color:white;padding:2px;">$$rating</span></div>'+
+		'<div><span style="background-color:#cb202d;color:white;padding:4px;">$$rating</span></div>'+
 		'<div >Votes $$vote</div>'+
 
 		'<!--  <div><a>10 reviews</a></div> -->'+
