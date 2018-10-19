@@ -1,3 +1,4 @@
+https://surbhiguptasai.github.io/CapstoneProject/
 <h1>Restaurant Searcher</h1>
 <p><a href="https://surbhiguptasai.github.io/CapstoneProject/">Restaurant Searcher</a> is a responsive  app that combines data from <a href="https://developers.google.com/maps/">Google Maps API</a> and <a href="https://developers.zomato.com/api">Zomato API</a> to give users ability to search restaurant near any location..</p>
 <img src="pics/restaurantSearcherC2.png">
