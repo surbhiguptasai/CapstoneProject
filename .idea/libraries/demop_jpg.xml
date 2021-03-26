@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="demop.jpg">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/backup/demop.jpg.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
